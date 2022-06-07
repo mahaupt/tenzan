@@ -51,14 +51,14 @@ ul.menu a {
   font-size: 1.1em;
 }
 
-ul#menu-header-menu {
+.header-menu ul.menu {
   display: flex;
   justify-content: space-evenly;
 }
-ul#menu-header-menu li {
+.header-menu ul.menu li {
   display: inline;
 }
-ul#menu-header-menu a {
+.header-menu ul.menu a {
   text-transform: uppercase;
   font-weight: 400;
 }
