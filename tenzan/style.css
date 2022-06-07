@@ -1,0 +1,113 @@
+/*
+Theme Name: Tenzan
+Theme URI: https://github.com/bestello/tenzan
+Author: Bestello.at
+Author URI: https://bestello.at
+Description: Built with love for tenzan lab
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tenzan
+*/
+
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', var(--bs-font-sans-serif);
+}
+
+.site-logo {
+  width: 100%;
+  max-width: 400px;
+}
+
+main, nav, footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+nav {
+  margin-bottom: 20px;
+}
+
+ul.menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.menu a {
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+  font-size: 1.1em;
+}
+
+ul#menu-header-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+ul#menu-header-menu li {
+  display: inline;
+}
+ul#menu-header-menu a {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+
+
+.strike {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap; 
+  font-family: 'Futura Medium', var(--bs-font-sans-serif);
+  color: rgb(136, 136, 136);
+}
+
+.strike > span {
+  position: relative;
+  display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: rgb(136, 136, 136);
+}
+.strike-bottom > span:before,
+.strike-bottom > span:after {
+  top: 64% !important;
+}
+
+.strike > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike > span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+
+
+
+footer, footer a {
+  font-family: 'Futura', var(--bs-font-sans-serif);
+  font-size: 1em !important;
+  color: rgb(136, 136, 136);
+}
