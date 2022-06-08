@@ -20,10 +20,18 @@ Text Domain: tenzan
  * https://github.com/WordPress/gutenberg/issues/35934
  */
 
+:root {
+  --primary-color: black;
+  --secondary-color: rgb(136, 136, 136);
+  --primary-font: 'Helvetica Neue', var(--bs-font-sans-serif);
+  --secondary-font: 'Futura', var(--bs-font-sans-serif);
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Helvetica Neue', var(--bs-font-sans-serif);
+  font-family: var(--primary-font);
+  color: var(--primary-color);
 }
 
 .site-logo {
@@ -36,26 +44,31 @@ main, nav, footer {
   margin: 0 auto;
   padding: 5px;
 }
+main nav {
+  padding: 0;
+}
 nav {
   margin-bottom: 20px;
 }
 
-ul.menu {
+ul.menu, nav ul {
   list-style-type: none;
   padding-left: 0;
 }
 
 ul.menu a {
   text-decoration: none;
-  color: rgb(136, 136, 136);
+  color: var(--secondary-color);
   font-size: 1.1em;
 }
-
-.header-menu ul.menu {
+header {
+  margin-bottom: 15px;
+}
+.header-menu ul.menu, nav ul {
   display: flex;
   justify-content: space-evenly;
 }
-.header-menu ul.menu li {
+.header-menu ul.menu li, nav ul li {
   display: inline;
 }
 .header-menu ul.menu a {
@@ -63,51 +76,24 @@ ul.menu a {
   font-weight: 400;
 }
 
-
-
-
-.strike {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap; 
-  font-family: 'Futura Medium', var(--bs-font-sans-serif);
-  color: rgb(136, 136, 136);
+@media (max-width: 600px) {
+  nav ul {
+    display: block;
+  }
+  nav ul li {
+    display: block;
+  }
 }
 
-.strike > span {
-  position: relative;
-  display: inline-block;
+footer {
+  margin-top: 40px;
 }
-
-.strike > span:before,
-.strike > span:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 9999px;
-  height: 1px;
-  background: rgb(136, 136, 136);
-}
-.strike-bottom > span:before,
-.strike-bottom > span:after {
-  top: 64% !important;
-}
-
-.strike > span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-
-.strike > span:after {
-  left: 100%;
-  margin-left: 15px;
-}
-
-
-
-
-footer, footer a {
-  font-family: 'Futura', var(--bs-font-sans-serif);
+footer, footer a, a {
+  font-family: var(--secondary-font);
   font-size: 1em !important;
-  color: rgb(136, 136, 136);
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+footer a:hover, a:hover {
+  color: black;
 }

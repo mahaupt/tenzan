@@ -1,5 +1,16 @@
 <?php
 
+
+function tenzan_scripts_setup() {
+  wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
+  wp_enqueue_style( 'tenzan_style', get_stylesheet_uri(), array('bootstrap') );
+  wp_enqueue_style( 'tenzan_strike', get_template_directory_uri() . '/assets/css/strike.css', array('bootstrap') );
+  wp_enqueue_style( 'tenzan_forms', get_template_directory_uri() . '/assets/css/forms.css', array('bootstrap', 'tenzan_style') );
+
+  wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array('jquery') );
+}
+add_action( 'wp_enqueue_scripts', 'tenzan_scripts_setup' );
+
 function tenzan_menu_setup() {
   register_nav_menus(
     array(

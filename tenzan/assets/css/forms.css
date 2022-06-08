@@ -1,0 +1,90 @@
+/* WOOCOMMERCE */
+.wp-block-button__link, .button {
+  background-color: transparent !important;
+  border-radius: 2px !important;
+  border: 1px solid black !important;
+  color: black !important;
+  font-weight: 300 !important;
+  font-family: var(--secondary-font);
+}
+.wp-block-button__link:hover, .button:hover {
+  color: black !important;
+}
+.wc-block-grid__product-link, .wc-block-grid__product-title, .woocommerce-loop-product__title {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  font-weight: 300;
+  text-decoration: none !important;
+}
+.woocommerce-Price-amount {
+  font-family: var(--secondary-font);
+  color: var(--bs-success);
+  font-weight: 300;
+}
+li.product {
+  text-align: center;
+}
+
+
+input {
+  border-radius: 2px !important;
+  border: 1px solid black !important;
+  color: black !important;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5 !important;
+}
+
+.coupon {
+  display: flex;
+}
+.coupon input {
+  flex: 1;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  min-width: 125px !important;
+}
+.coupon button {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 0 !important;
+}
+.wc-forward {
+  width: 100%;
+  text-align: center;
+}
+
+.shop_table {
+  border-radius: 2px !important;
+}
+
+
+select, .select2-container--default .select2-selection--single {
+  display: block;
+  width: 100%;
+  padding: .375rem 2.25rem .375rem .75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-color);
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: auto;
+}
+.select2-selection__rendered {
+  padding: 0 !important;
+}
+.select2-selection__arrow {
+  display: none;
+}

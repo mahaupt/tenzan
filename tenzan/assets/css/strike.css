@@ -1,0 +1,36 @@
+.strike {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap; 
+  font-family: 'Futura Medium', var(--bs-font-sans-serif);
+  color: rgb(136, 136, 136);
+}
+
+.strike > span {
+  position: relative;
+  display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: rgb(136, 136, 136);
+}
+.strike-bottom > span:before,
+.strike-bottom > span:after {
+  top: 64% !important;
+}
+
+.strike > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike > span:after {
+  left: 100%;
+  margin-left: 15px;
+}
